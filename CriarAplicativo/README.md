@@ -45,4 +45,4 @@
 
 ## Scripts de Criação de Aplicativos Automatizados
 
-- Lembrando que para funcionar corretamente cada um destes scripts é recomendado você utilizar o script de instalação all_l.sh
+- Lembrando que para funcionar corretamente cada um destes scripts é recomendado você utilizar o script de instalação install_l_f.sh que está na pasta bin.

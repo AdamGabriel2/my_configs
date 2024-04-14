@@ -275,7 +275,7 @@ full-lmp(){
 }
 
 final(){
-  full-att && full-lmp && sudo dpkg --configure -a
+  full-att() && full-lmp() && sudo dpkg --configure -a
 }
 
 # ------------------------------------------------------------------------------------------- #

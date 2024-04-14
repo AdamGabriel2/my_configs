@@ -3,15 +3,20 @@
 \bin
 --\ full-att.sh
 --\ full-lmp.sh
+--\ install_l_f.sh
 --\ lm-postinstall.sh
 
 ## full-att.sh
 
-- Aqui está o meu script de atualização de Pacotes, Sistema e Flatpaks
+- Aqui está o meu script de atualização de Pacotes, Sistema e Flatpaks.
 
 ## full-att.sh
 
-- Aqui está o meu script de limpeza de Pacotes e Flatpaks obsoletos ou não utilizados
+- Aqui está o meu script de limpeza de Pacotes e Flatpaks obsoletos ou não utilizados.
+
+## install_l_f.sh
+
+- Aqui está o meu script de intalação de todas as linguagens de programação e frameworks que eu utilizo.
 
 ## lm-postinstall.sh
 

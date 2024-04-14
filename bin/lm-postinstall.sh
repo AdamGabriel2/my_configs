@@ -85,9 +85,6 @@ LINGUAGENS_PARA_INSTALAR=(
   gcc
   g++
   build-essential
-  dotnet8
-  clang
-  ruby-full
 )
 
 # ------------------------------------------------------------------------------------------- #
@@ -135,133 +132,6 @@ install_flatpaks(){
 
 flatpak install flathub com.bitwarden.desktop -y
 flatpak install flathub org.telegram.desktop -y
-}
-
-## Instalação de outras linguagens de programação e frameworks que eu utilizo ##
-
-install_outros(){
-## Instalar/Atualizar Rust ##
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-
-## Verificar se o Cargo foi instalado ##
-cargo -v
-
-## Instalação de dependencias e do Flutter e Dart ##
-## Dependencias ##
-sudo apt install -y curl git unzip xz-utils zip libglu1-mesa
-sudo apt install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386
-
-## Instalação do Flutter e Dart ##
-cd $DIRETORIO_DOWNLOADS
-wget https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.19.5-stable.tar.xz
-tar xf flutter_linux_3.19.5-stable.tar.xz
-sudo mv flutter/ /opt
-echo 'export PATH="/opt/flutter/bin:$PATH"' >> ~/.bashrc
-cd $HOME
-source ~/.bashrc
-
-## Verificar se o Flutter e Dart foram instalados ##
-flutter -v
-dart -v
-
-## Instalar/Atualizar o symfony ##
-cd $DIRETORIO_DOWNLOADS
-wget https://get.symfony.com/cli/installer -O - | bash
-sudo mv .symfony5/bin/symfony /usr/local/bin/symfony
-
-## Instalação do NVM ##
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.x/install.sh | bash
-source ~/.bashrc
-
-## Verificar se o nvm foi instalado ##
-nvm -v
-
-## Instalação/Atualização do Composer ##
-curl -sS https://getcomposer.org/installer | php
-sudo mv composer.phar /usr/local/bin/composer
-chmod +x /usr/local/bin/composer
-
-## Frameworks NPM e PIP ##
-
-## Instalação dos pacotes necessarios ##
-## Instalar node ##
-nvm install node
-
-## Instalar ultima versão do npm ##
-nvm install-latest-npm
-
-## Instalar pip ##
-sudo apt install python3-pip
-
-## Verificar se os pacotes foram instalados ##
-node -v
-npm -v
-pip -v
-
-# Atualização do Angular
-npm install -g @angular/cli
-
-# Atualização do Express
-npm install -g express
-
-# Atualização do React
-npm install -g create-react-app
-
-# Atualização do GraphQL
-npm install -g graphql-cli
-
-# Atualização do node-sass
-npm install -g node-sass
-
-# Atualização do Bootstrap
-npm install -g bootstrap
-
-# Atualização do jQuery
-npm install -g jquery
-
-# Atualização do Django
-pip install django
-
-# Atualização do Flask
-pip install flask
-
-# Verificando e corrigindo vulnerabilidades de segurança nos pacotes npm instalados
-npm audit fix
-
-# Verificando por vulnerabilidades de segurança nos pacotes npm instalados
-npm audit
-
-# Verificando se há pacotes desatualizados e atualizando-os para suas versões mais recentes
-npm outdated
-npm update
-
-# Atualizar as versões no package.json, dependencies e devdependencies
-npm install -g npm-check-updates
-ncu -u
-
-# Executar atualizacações e instalar novas versões das dependencias
-npm update
-npm install
-
-# Atualizando todos os pacotes Python instalados para suas versões mais recentes
-pip install --upgrade pip
-pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U
-
-# Verificando por vulnerabilidades de segurança nos pacotes Python instalados
-pip install safety
-safety check
-
-## Atualização do sistema e instalação de pacotes necessários ##
-
-sudo apt update -y
-sudo apt upgrade -y
-
-## Configuração do sistema ##
-
-sudo dpkg --configure -a
-
-echo "Todos os pacotes e linguagens foram atualizados com sucesso."
-
 }
 
 # ------------------------------------------------------------------------------------------- #
@@ -314,7 +184,6 @@ travas_apt
 full-att
 install_alls
 install_flatpaks
-install_outros
 extra_config
 full-lmp
 final

@@ -1,1 +1,3 @@
 # my_configs
+
+- Aqui vão estar meus scripts de automação de tarefas, pós instalação, compliadores e etc...

@@ -33,7 +33,7 @@ SEM_COR='\e[0m'
 ## Atualizando repositório e fazendo atualização do sistema ##
 
 full-att(){
-  sudo apt update -y && sudo apt upgrade -y && sudo apt full-upgrade -y && sudo apt dist-upgrade -y && sudo flatpak update -y
+sudo apt update -y && sudo apt upgrade -y && sudo apt full-upgrade -y && sudo apt dist-upgrade -y && sudo flatpak update -y
 }
 
 # ----------------------------------- TESTES E REQUISITOS ----------------------------------- #
@@ -141,11 +141,13 @@ flatpak install flathub org.telegram.desktop -y
 ## Finalização, atualização e limpeza ##
 
 full-lmp(){
-  sudo apt update -y && sudo apt autoclean -y && sudo apt autoremove -y && sudo apt autopurge -y && sudo flatpak uninstall --unused -y
+sudo apt update -y && sudo apt autoclean -y && sudo apt autoremove -y && sudo apt autopurge -y && sudo flatpak uninstall --unused -y
 }
 
 final(){
-  full-att() && full-lmp() && sudo dpkg --configure -a
+full-att
+full-lmp
+sudo dpkg --configure -a
 }
 
 # ------------------------------------------------------------------------------------------- #

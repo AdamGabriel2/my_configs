@@ -1,18 +1,13 @@
 # Pasta bin
 
 \bin
---\ full-att.sh
---\ full-lmp.sh
+--\ att-lmp-a.sh
 --\ install_l_f.sh
 --\ lm-postinstall.sh
 
-## full-att.sh
+## att-lmp-a.sh
 
-- Aqui está o meu script de atualização de Pacotes, Sistema e Flatpaks.
-
-## full-att.sh
-
-- Aqui está o meu script de limpeza de Pacotes e Flatpaks obsoletos ou não utilizados.
+- Aqui está o meu script de atualização e limpeza de Pacotes, Sistema, Flatpaks e Snaps.
 
 ## install_l_f.sh
 

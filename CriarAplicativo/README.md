@@ -1,5 +1,5 @@
 # Pasta CriarAplicativo
-
+```
 \ CriarAplicativo
 --\ 1
 ----\ criar_aplicativo_all.sh
@@ -42,6 +42,7 @@
 ----\ criar_aplicativo_flutter.sh
 ----\ criar_aplicativo_flutter_2.sh
 ----\ criar_aplicativo_react_native.sh
+```
 
 ## Scripts de Criação de Aplicativos Automatizados
 

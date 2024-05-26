@@ -13,6 +13,6 @@
 
 - Aqui está o meu script de intalação de todas as linguagens de programação e frameworks que eu utilizo.
 
-## lm-postinstall.sh
+## postinstall.sh
 
-- Aqui está o meu script de pós instalação do Linux Mint 22.0 ou superior.
+- Aqui está o meu script de pós instalação de sistemas Linux que funciona em praticamente todos os derivados do Arch Linux, Debian e Fedora/RHEL.
